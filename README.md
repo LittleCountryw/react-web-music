@@ -1,6 +1,11 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# use 
+react 
+create-react-app
+react-router6 
+redux 
+react-redux 
+immerJS
+AntDesigin
 
 ## Available Scripts
 
