@@ -1,0 +1,23 @@
+import React, { memo } from 'react'
+import { AlbumWrapper } from './style'
+import { getSizeImage } from '@/utils/format-utils'
+const LCAlbumCover = memo((props) => {
+  // albumcover在多个页面使用,但是大小不同,那么图片宽高和bgp不同,由父级传入
+  const { info, size = 130, width = 153, bgp = '-845px' } = props
+  return (
+    <AlbumWrapper size={size} width={width} bgp={bgp}>
+      <div className="album-image">
+        <img src={getSizeImage(info.picUrl, size)} alt="" />
+        <a href="/todo" className="cover image_cover">
+          {info.name}
+        </a>
+      </div>
+      <div className="album-info">
+        <div className="name text-nowrap">{info.name}</div>
+        <div className="artist text-nowrap">{info.artist.name}</div>
+      </div>
+    </AlbumWrapper>
+  )
+})
+
+export default LCAlbumCover
